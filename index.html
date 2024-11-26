@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coming Soon | KleanSure</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Custom Styles (Optional) -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <style>
+      /* Custom Styles */
+      body {
+        font-family: 'Arial', sans-serif;
+      }
+      section {
+        padding: 60px 20px;
+      }
+      .gradient-bg {
+        background: linear-gradient(to right, #34d399, #3b82f6);
+      }
+      .hero-overlay {
+        background: rgba(0, 0, 0, 0.5);
+      }
+      .section-title {
+        color: #fff;
+        font-weight: bold;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px rgba(0, 0, 0, 0.3);
+      }
+      .btn-primary-custom {
+        background: #34d399;
+        border: none;
+      }
+      .btn-primary-custom:hover {
+        background: #059669;
+      }
+      .bg-blue {
+        background: linear-gradient(to bottom, #3b82f6, #2563eb);
+      }
+      .bg-green {
+        background: linear-gradient(to bottom, #34d399, #059669);
+      }
+      .icon-box {
+        background: #fff;
+        color: #059669;
+        border-radius: 50%;
+        width: 70px;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px auto;
+        font-size: 1.5rem;
+      }
+      .services-card {
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      .responsive-img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+      }
+
+      /* Ensure header stays visible while scrolling */
+      header {
+        position: sticky;
+        top: 0;
+        transition: all 0.3s ease-in-out;
+      }
+
+      /* Mobile Sidebar */
+      #mobile-menu {
+        display: none; /* Hidden by default */
+        position: fixed; /* Fixed to viewport */
+        top: 0;
+        right: 0; /* Start from the right edge */
+        height: 100vh; /* Full viewport height */
+        width: 100%; /* Full viewport width */
+        background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+        backdrop-filter: blur(10px); /* Add a blur effect */
+        z-index: 50; /* Ensure it appears above other elements */
+        align-items: center; /* Center content vertically */
+        justify-content: center; /* Center content horizontally */
+        flex-direction: column; /* Stack menu items */
+      }
+
+      #mobile-menu.active {
+        display: flex; /* Make it visible */
+      }
+
+
+    </style>
+
+</head>
+<body class="bg-gradient-to-br from-green-500 to-teal-500 text-white">
+
+  <header class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+    <div class="container mx-auto px-6 flex items-center justify-between py-4">
+      <!-- Logo -->
+      <div class="text-2xl font-bold text-gray-800">KleanSure</div>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex space-x-6">
+        <a href="#home" class="text-gray-800 hover:text-green-500">Home</a>
+        <a href="#about" class="text-gray-800 hover:text-green-500">About</a>
+        <a href="#services" class="text-gray-800 hover:text-green-500">Services</a>
+        <a href="#contact" class="text-gray-800 hover:text-green-500">Contact</a>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button id="menu-button" class="block md:hidden text-gray-800 focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Sidebar -->
+    <nav id="mobile-menu" class="hidden fixed inset-0 bg-gray-900 bg-opacity-75 backdrop-blur-md z-50">
+      <div class="absolute top-0 right-0 p-6">
+        <button id="close-menu" class="text-white">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <ul class="flex flex-col items-center justify-center h-full space-y-6 text-white">
+        <li><a href="#home" class="text-lg hover:text-green-400">Home</a></li>
+        <li><a href="#about" class="text-lg hover:text-green-400">About</a></li>
+        <li><a href="#services" class="text-lg hover:text-green-400">Services</a></li>
+        <li><a href="#contact" class="text-lg hover:text-green-400">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <!-- Hero Section/Home -->
+  <section class="relative h-screen bg-cover bg-center " id="home">
+    <!-- Blurred Background Image -->
+    <div class="absolute inset-0">
+      <img src="images/kleansurelogo.png" alt="Background" class="object-cover w-full h-full blur-md brightness-50">
+    </div>
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div> <!-- Overlay -->
+    <div class="container h-full text-center text-white relative z-10 px-4">
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <h1 class="text-4xl md:text-6xl font-bold mb-4 animate__animated animate__fadeIn animate__delay-1s">
+        Cleaning the Future, One Space at a Time
+      </h1>
+      <p class="lead mb-5 animate__animated animate__fadeIn animate__delay-2s">
+        Launching Soon – Join Our Waiting List to Be the First to Experience Premium Cleaning and Waste Services!
+      </p>
+
+      <!-- Animated Countdown Timer -->
+      <div class="mt-10 flex justify-center gap-4 animate__animated animate__fadeIn animate__delay-4s">
+        <div class="bg-white text-black rounded-lg p-4 shadow-lg">
+          <div id="countdown" class="flex space-x-2">
+            <div class="flex flex-col items-center">
+              <span id="days" class="text-3xl font-bold">00</span>
+              <span class="text-sm">Days</span>
+            </div>
+            <div class="flex flex-col items-center">
+              <span id="hours" class="text-3xl font-bold">00</span>
+              <span class="text-sm">Hours</span>
+            </div>
+            <div class="flex flex-col items-center">
+              <span id="minutes" class="text-3xl font-bold">00</span>
+              <span class="text-sm">Minutes</span>
+            </div>
+            <div class="flex flex-col items-center">
+              <span id="seconds" class="text-3xl font-bold">00</span>
+              <span class="text-sm">Seconds</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-12 bg-gray-100 text-gray-800">
+    <div class="container mx-auto px-4">
+      <!-- Section Title -->
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold mb-4">Our Services</h2>
+        <p class="text-lg text-gray-600">We specialize in all cleaning and waste management services to keep your spaces pristine and sustainable.</p>
+      </div>
+
+      <!-- Horizontal Scrollable Row -->
+      <div class="services-scroll flex gap-6 overflow-x-auto scroll-smooth px-4 py-4">
+        <!-- Card 1 -->
+        <div class="service-card bg-white rounded-lg shadow-lg p-6 text-center w-72 flex-shrink-0">
+          <div class="w-16 h-16 mx-auto mb-4 bg-green-500 text-white rounded-full flex items-center justify-center">
+            <i class="fas fa-broom text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Residential Cleaning</h3>
+          <p class="text-gray-600">Keep your home sparkling with our top-notch residential cleaning services.</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="service-card bg-white rounded-lg shadow-lg p-6 text-center w-72 flex-shrink-0">
+          <div class="w-16 h-16 mx-auto mb-4 bg-teal-500 text-white rounded-full flex items-center justify-center">
+            <i class="bi bi-building text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Commercial Cleaning</h3>
+          <p class="text-gray-600">Comprehensive cleaning services for offices and commercial spaces.</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="service-card bg-white rounded-lg shadow-lg p-6 text-center w-72 flex-shrink-0">
+          <div class="w-16 h-16 mx-auto mb-4 bg-blue-500 text-white rounded-full flex items-center justify-center">
+            <i class="fas fa-dumpster text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Waste Management</h3>
+          <p class="text-gray-600">Efficient waste collection and disposal solutions tailored to your needs.</p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="service-card bg-white rounded-lg shadow-lg p-6 text-center w-72 flex-shrink-0">
+          <div class="w-16 h-16 mx-auto mb-4 bg-orange-500 text-white rounded-full flex items-center justify-center">
+            <i class="fas fa-recycle text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Recycling Services</h3>
+          <p class="text-gray-600">Sustainable recycling programs to minimize your environmental footprint.</p>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="service-card bg-white rounded-lg shadow-lg p-6 text-center w-72 flex-shrink-0">
+          <div class="w-16 h-16 mx-auto mb-4 bg-purple-500 text-white rounded-full flex items-center justify-center">
+            <i class="fas fa-soap text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Deep Cleaning</h3>
+          <p class="text-gray-600">Thorough deep cleaning for all spaces, ensuring hygiene and freshness.</p>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="service-card bg-white rounded-lg shadow-lg p-6 text-center w-72 flex-shrink-0">
+          <div class="w-16 h-16 mx-auto mb-4 bg-red-500 text-white rounded-full flex items-center justify-center">
+            <i class="fas fa-truck-loading text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Bulk Waste Removal</h3>
+          <p class="text-gray-600">Quick and efficient removal of bulk waste for residential and commercial areas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Waitlist Section -->
+  <section id="join-waitlist" class="relative py-16 bg-gray-100 text-gray-800">
+    <!-- Blurred Background -->
+    <div class="absolute inset-0">
+      <img src="images/cleaning-service.jpeg" alt="Blurred Background" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-gray-900 bg-opacity-40 backdrop-blur-md"></div>
+    </div>
+
+    <div class="relative container mx-auto px-6 flex flex-col md:flex-row items-center gap-6 max-w-2xl">
+      <!-- Image Column -->
+      <div class="md:w-5/12">
+        <img src="images/mockup1.png" alt="Join Waitlist" class="rounded-lg w-auto h-auto">
+      </div>
+
+      <!-- Form Column -->
+      <div class="md:w-7/12 bg-white/90 backdrop-blur-lg p-8 rounded-lg shadow-2xl">
+        <h2 class="text-4xl font-extrabold text-gray-900 mb-4">Join Our Waitlist</h2>
+        <p class="text-lg text-gray-600 mb-6">Be the first to know when we launch. Sign up to receive updates and exclusive offers!</p>
+
+        <form id="waitlist-form" action="waitlist-handler.php" method="POST" class="space-y-4">
+          <!-- Full Name Field -->
+          <div>
+            <label for="fullname" class="block text-sm font-medium text-gray-700">Full Name</label>
+            <input type="text" id="fullname" name="fullname" required
+              class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 text-gray-900">
+          </div>
+
+          <!-- Email Address Field -->
+          <div>
+            <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+            <input type="email" id="email" name="email" required
+              class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 text-gray-900">
+          </div>
+
+          <!-- Submit Button -->
+          <div>
+            <button type="submit"
+              class="w-full py-2 px-4 bg-green-500 text-white font-semibold rounded-md shadow-sm hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-400 transition duration-200">
+              Join Now
+            </button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+
+  </section>
+
+
+
+
+ <section id="how-it-works" class="relative py-16 bg-gray-50 text-gray-800">
+   <div class="container mx-auto px-4 text-center">
+     <!-- Title -->
+     <h2 class="text-4xl font-extrabold mb-6 text-gray-900">How the App Works</h2>
+     <p class="text-lg text-gray-600 mb-10">Discover how KleanSure makes cleaning and waste management seamless with just a few taps.</p>
+
+     <!-- Steps Section -->
+     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+       <!-- Step 1 -->
+       <div class="p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+         <img src="images/register.png" alt="Sign Up" class="w-60 h-40 object-cover rounded-t-lg mb-2">
+         <h3 class="text-xl font-bold text-gray-900 mb-2">Step 1: Sign Up</h3>
+         <p class="text-gray-600">Create an account in just a few seconds and get started.</p>
+       </div>
+
+       <!-- Step 2 -->
+       <div class="p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+         <img src="images/services.png" alt="Book a Service" class="w-60 h-40 object-cover rounded-t-lg mb-4">
+         <h3 class="text-xl font-bold text-gray-900 mb-2">Step 2: Book a Service</h3>
+         <p class="text-gray-600">Choose the service and time that works best for you.</p>
+       </div>
+
+       <!-- Step 3 -->
+       <div class="p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+         <img src="images/clean.avif" alt="Sit Back & Relax" class="w-full h-40 object-cover rounded-t-lg mb-4">
+         <h3 class="text-xl font-bold text-gray-900 mb-2">Step 3: Sit Back & Relax</h3>
+         <p class="text-gray-600">Enjoy a clean space, while we handle the rest for you.</p>
+       </div>
+     </div>
+   </div>
+ </section>
+
+
+
+
+ <section id="about" class="relative py-12">
+   <!-- Blurred Background Image -->
+   <div class="absolute inset-0">
+     <img src="images/farm2.jpg" alt="Background" class="object-cover w-full h-full blur-md brightness-50">
+   </div>
+   <!-- Content Overlay -->
+   <div class="relative container mx-auto px-4 flex flex-col md:flex-row items-center text-white">
+     <!-- Image Section -->
+     <div class="md:w-1/2 mb-8 md:mb-0 text-center md:text-left ">
+       <img src="images/kleansurelogo.png" alt="KleanSure Logo" class="rounded-lg shadow-lg max-w-sm mx-auto md:mx-0 bg-white">
+     </div>
+
+     <!-- About Section -->
+     <div class="md:w-1/2">
+       <h2 class="text-4xl font-bold mb-6 text-center md:text-left">About KleanSure</h2>
+       <p class="mb-6 text-lg leading-relaxed">
+         KleanSure is revolutionizing how you approach cleaning and waste management. 
+         Our eco-friendly solutions ensure a cleaner, greener future for everyone.
+       </p>
+       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+         <!-- Sustainability Card -->
+         <div class="p-6 bg-white bg-opacity-90 text-green-700 rounded-lg shadow-lg">
+           <i class="fas fa-seedling text-3xl mb-4"></i>
+           <h3 class="font-bold text-lg">Sustainability</h3>
+           <p class="text-sm">Eco-conscious solutions for a healthier planet.</p>
+         </div>
+         <!-- Commitment Card -->
+         <div class="p-6 bg-white bg-opacity-90 text-green-700 rounded-lg shadow-lg">
+           <i class="fas fa-hands-helping text-3xl mb-4"></i>
+           <h3 class="font-bold text-lg">Commitment</h3>
+           <p class="text-sm">Dedicated to providing exceptional services.</p>
+         </div>
+         <!-- Quality Card -->
+         <div class="p-6 bg-white bg-opacity-90 text-green-700 rounded-lg shadow-lg">
+           <i class="fas fa-award text-3xl mb-4"></i>
+           <h3 class="font-bold text-lg">Quality</h3>
+           <p class="text-sm">Uncompromised cleaning excellence.</p>
+         </div>
+       </div>
+     </div>
+   </div>
+ </section>
+
+    </div>
+  </section>
+
+
+
+  <!-- FontAwesome for icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
+  <!-- Bootstrap JS (optional) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS for Countdown -->
+  <script src="main.js"></script>
+</body>
+</html>

@@ -33,3 +33,60 @@ menuButton.addEventListener("click", () => {
 closeButton.addEventListener("click", () => {
   mobileMenu.classList.remove("active");
 });
+
+
+document.getElementById("waitlist-form").addEventListener("submit", async (e) => {
+  e.preventDefault(); // Prevent default form submission
+
+  const fullname = document.getElementById("fullname").value.trim();
+  const email = document.getElementById("email").value.trim();
+
+  // Validate form fields (optional)
+  if (!fullname || !email) {
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Please fill in all fields.",
+    });
+    return;
+  }
+
+  // Prepare the data using FormData
+  const formData = new FormData();
+  formData.append("fullname", fullname);
+  formData.append("email", email);
+
+  try {
+    // Send data to Zapier webhook
+    const response = await fetch("https://hooks.zapier.com/hooks/catch/20838656/2i3qe28/", {
+      method: "POST",
+      body: formData,
+    });
+
+    if (response.ok) {
+      // Show success message with SweetAlert2
+      Swal.fire({
+        icon: "success",
+        title: "Success!",
+        text: "Thank you for joining our waitlist! You will receive updates soon.",
+        confirmButtonText: "OK",
+      });
+
+      // Optionally reset the form
+      document.getElementById("waitlist-form").reset();
+    } else {
+      Swal.fire({
+        icon: "error",
+        title: "Error!",
+        text: "Something went wrong. Please try again.",
+      });
+    }
+  } catch (error) {
+    console.error("Error submitting the form:", error);
+    Swal.fire({
+      icon: "error",
+      title: "Error!",
+      text: "There was an error. Please try again later.",
+    });
+  }
+});

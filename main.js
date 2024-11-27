@@ -1,4 +1,4 @@
-const countdownDate = new Date("2025-12-31T00:00:00").getTime();
+/*const countdownDate = new Date("2025-12-31T00:00:00").getTime();
 
 const interval = setInterval(function() {
   const now = new Date().getTime();
@@ -18,7 +18,7 @@ const interval = setInterval(function() {
     clearInterval(interval);
     document.getElementById("countdown").innerText = "EXPIRED";
   }
-}, 1000);
+}, 1000);*/
 
 
 // Toggle Mobile Menu

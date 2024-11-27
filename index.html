@@ -3,399 +3,397 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Coming Soon | KleanSure</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Tailwind CSS -->
+  <title>Kleansure - Clean Service</title>
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Custom Styles (Optional) -->
-  <link rel="stylesheet" href="css/styles.css">
+  <!-- FontAwesome Icons -->
+  <link href="fontawesome/css/all.css" rel="stylesheet">
 
-  <style>
-      /* Custom Styles */
-      body {
-        font-family: 'Arial', sans-serif;
-      }
-      section {
-        padding: 60px 20px;
-      }
-      .gradient-bg {
-        background: linear-gradient(to right, #34d399, #3b82f6);
-      }
-      .hero-overlay {
-        background: rgba(0, 0, 0, 0.5);
-      }
-      .section-title {
-        color: #fff;
-        font-weight: bold;
-        margin-bottom: 20px;
-        text-shadow: 2px 2px rgba(0, 0, 0, 0.3);
-      }
-      .btn-primary-custom {
-        background: #34d399;
-        border: none;
-      }
-      .btn-primary-custom:hover {
-        background: #059669;
-      }
-      .bg-blue {
-        background: linear-gradient(to bottom, #3b82f6, #2563eb);
-      }
-      .bg-green {
-        background: linear-gradient(to bottom, #34d399, #059669);
-      }
-      .icon-box {
-        background: #fff;
-        color: #059669;
-        border-radius: 50%;
-        width: 70px;
-        height: 70px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 auto 20px auto;
-        font-size: 1.5rem;
-      }
-      .services-card {
-        background: #fff;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      }
-      .responsive-img {
-        max-width: 100%;
-        height: auto;
-        border-radius: 10px;
-      }
-
-      /* Ensure header stays visible while scrolling */
-      header {
-        position: sticky;
-        top: 0;
-        transition: all 0.3s ease-in-out;
-      }
-
-      /* Mobile Sidebar */
-      #mobile-menu {
-        display: none; /* Hidden by default */
-        position: fixed; /* Fixed to viewport */
-        top: 0;
-        right: 0; /* Start from the right edge */
-        height: 100vh; /* Full viewport height */
-        width: 100%; /* Full viewport width */
-        background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
-        backdrop-filter: blur(10px); /* Add a blur effect */
-        z-index: 50; /* Ensure it appears above other elements */
-        align-items: center; /* Center content vertically */
-        justify-content: center; /* Center content horizontally */
-        flex-direction: column; /* Stack menu items */
-      }
-
-      #mobile-menu.active {
-        display: flex; /* Make it visible */
-      }
-
-
-    </style>
-
+  <!-- Custom Styles -->
+  <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
-<body class="bg-gradient-to-br from-green-500 to-teal-500 text-white">
+<body class="bg-gray-50 text-gray-800">
 
-  <header class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
-    <div class="container mx-auto px-6 flex items-center justify-between py-4">
-      <!-- Logo -->
-      <div class="text-2xl font-bold text-gray-800">KleanSure</div>
+ <!-- Header -->
+ <!-- Header -->
+ <header class="bg-white shadow-md fixed w-full z-50">
+   <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+     <!-- Logo -->
+     <div class="text-2xl font-bold text-blue-600 flex items-center space-x-2">
+       <img src="images/kleansurelogo.png" class="w-10 h-10 rounded-full" alt="Logo">
+       <span>Kleansure</span>
+     </div>
 
-      <!-- Desktop Navigation -->
-      <nav class="hidden md:flex space-x-6">
-        <a href="#home" class="text-gray-800 hover:text-green-500">Home</a>
-        <a href="#about" class="text-gray-800 hover:text-green-500">About</a>
-        <a href="#services" class="text-gray-800 hover:text-green-500">Services</a>
-        <a href="#contact" class="text-gray-800 hover:text-green-500">Contact</a>
-      </nav>
+     <!-- Desktop Navigation -->
+     <nav class="hidden md:flex space-x-6">
+       <a href="#home" class="text-gray-700 hover:text-green-500">Home</a>
+       <a href="#services" class="text-gray-700 hover:text-green-500">Services</a>
+       <a href="#about" class="text-gray-700 hover:text-green-500">About Us</a>
+       <a href="#contact" class="text-gray-700 hover:text-green-500">Contact</a>
+     </nav>
 
-      <!-- Mobile Menu Button -->
-      <button id="menu-button" class="block md:hidden text-gray-800 focus:outline-none">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
-    </div>
+     <!-- Desktop Button -->
+     <button class="hidden md:block bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-green-600"><a href="#join-waitlist">Join our waitlist</a></button>
 
-    <!-- Mobile Sidebar -->
-    <nav id="mobile-menu" class="hidden fixed inset-0 bg-gray-900 bg-opacity-75 backdrop-blur-md z-50">
-      <div class="absolute top-0 right-0 p-6">
-        <button id="close-menu" class="text-white">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
-      </div>
-      <ul class="flex flex-col items-center justify-center h-full space-y-6 text-white">
-        <li><a href="#home" class="text-lg hover:text-green-400">Home</a></li>
-        <li><a href="#about" class="text-lg hover:text-green-400">About</a></li>
-        <li><a href="#services" class="text-lg hover:text-green-400">Services</a></li>
-        <li><a href="#contact" class="text-lg hover:text-green-400">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+     <!-- Mobile Menu Button -->
+           <button id="menu-button" class="block md:hidden text-gray-800 focus:outline-none">
+             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+             </svg>
+           </button>
+         </div>
+
+         <!-- Mobile Sidebar -->
+         <nav id="mobile-menu" class="hidden fixed inset-0 bg-gray-900 bg-opacity-75 backdrop-blur-md z-50">
+           <div class="absolute top-0 right-0 p-6">
+             <button id="close-menu" class="text-white">
+               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+               </svg>
+             </button>
+           </div>
+           <ul class="flex flex-col items-center justify-center h-full space-y-6 text-white">
+             <li><a href="#home" class="text-lg hover:text-green-400">Home</a></li>
+             <li><a href="#about" class="text-lg hover:text-green-400">About</a></li>
+             <li><a href="#services" class="text-lg hover:text-green-400">Services</a></li>
+             <li><a href="#contact" class="text-lg hover:text-green-400">Contact</a></li>
+           </ul>
+         </nav>
+ </header>
 
 
-  <!-- Hero Section/Home -->
-  <section class="relative h-screen bg-cover bg-center " id="home">
-    <!-- Blurred Background Image -->
-    <div class="absolute inset-0">
-      <img src="images/kleansurelogo.png" alt="Background" class="object-cover w-full h-full blur-md brightness-50">
-    </div>
-    <div class="absolute inset-0 bg-black bg-opacity-50"></div> <!-- Overlay -->
-    <div class="container h-full text-center text-white relative z-10 px-4">
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <h1 class="text-4xl md:text-6xl font-bold mb-4 animate__animated animate__fadeIn animate__delay-1s">
-        Cleaning the Future, One Space at a Time
-      </h1>
-      <p class="lead mb-5 animate__animated animate__fadeIn animate__delay-2s">
-        Launching Soon – Join Our Waiting List to Be the First to Experience Premium Cleaning and Waste Services!
-      </p>
 
-      <!-- Animated Countdown Timer -->
-      <div class="mt-10 flex justify-center gap-4 animate__animated animate__fadeIn animate__delay-4s">
-        <div class="bg-white text-black rounded-lg p-4 shadow-lg">
-          <div id="countdown" class="flex space-x-2">
-            <div class="flex flex-col items-center">
-              <span id="days" class="text-3xl font-bold">00</span>
-              <span class="text-sm">Days</span>
-            </div>
-            <div class="flex flex-col items-center">
-              <span id="hours" class="text-3xl font-bold">00</span>
-              <span class="text-sm">Hours</span>
-            </div>
-            <div class="flex flex-col items-center">
-              <span id="minutes" class="text-3xl font-bold">00</span>
-              <span class="text-sm">Minutes</span>
-            </div>
-            <div class="flex flex-col items-center">
-              <span id="seconds" class="text-3xl font-bold">00</span>
-              <span class="text-sm">Seconds</span>
-            </div>
+
+
+ <!-- Hero Section -->
+ <section id="home" class="relative h-screen bg-cover bg-center" style="background-image: url('images/cleaning-service.jpeg');">
+   <!-- Background Overlay -->
+   <div class="absolute inset-0 bg-black bg-opacity-50 pointer-events-none"></div>
+   
+   <!-- Content -->
+   <div class="relative container mx-auto px-6 h-full flex items-center justify-center text-center">
+     <div class="text-white">
+       <h1 class="text-4xl md:text-6xl font-bold mb-4">Professional Cleaning Service</h1>
+       <p class="text-lg mb-6">We are a premium cleaning company in the Ghana ready to make your life easier.</p>
+       <a href="#join-waitlist" class="bg-blue-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-green-600">Join our waitlist</a>
+     </div>
+   </div>
+ </section>
+
+
+
+
+  <section id="services" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12">Our Services</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <!-- Item 1 -->
+        <div class="flex flex-col items-start p-4 border border-gray-100 rounded-lg ">
+          <div class="w-10 h-10 bg-blue-500 text-white rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-clock text-lg"></i>
           </div>
+          <h3 class="text-xl font-bold mb-2">Choose Your Time</h3>
+          <p class="text-gray-600 mb-2">Schedule a time that works for you, hassle-free.</p>
+          <a href="#details" class="text-blue-500 hover:text-blue-600 font-semibold">Learn More</a>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="flex flex-col items-start p-4 border border-gray-100 rounded-lg ">
+          <div class="w-10 h-10 bg-blue-500 text-white rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-book text-lg"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Book Swiftly</h3>
+          <p class="text-gray-600 mb-2">Complete your booking in just a few minutes.</p>
+          <a href="#details" class="text-blue-500 hover:text-blue-600 font-semibold">Learn More</a>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="flex flex-col items-start p-4 border border-gray-100 rounded-lg ">
+          <div class="w-10 h-10 bg-blue-500 text-white rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-users text-lg"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Our Team Arrives</h3>
+          <p class="text-gray-600 mb-2">Relax while our team cleans your space professionally.</p>
+          <a href="#details" class="text-blue-500 hover:text-blue-600 font-semibold">Learn More</a>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="flex flex-col items-start p-4 border border-gray-100 rounded-lg">
+          <div class="w-10 h-10 bg-blue-500 text-white rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-seedling text-lg"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Eco-Friendly Cleaning</h3>
+          <p class="text-gray-600 mb-2">We use environmentally friendly products.</p>
+          <a href="#details" class="text-blue-500 hover:text-blue-600 font-semibold">Learn More</a>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="flex flex-col items-start p-4 border border-gray-100 rounded-lg">
+          <div class="w-10 h-10 bg-blue-500 text-white rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-star text-lg"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Premium Quality</h3>
+          <p class="text-gray-600 mb-2">We ensure the highest standards of cleaning.</p>
+          <a href="#details" class="text-blue-500 hover:text-blue-600 font-semibold">Learn More</a>
+        </div>
+
+        <!-- Item 6 -->
+        <div class="flex flex-col items-start p-4 border border-gray-100 rounded-lg">
+          <div class="w-10 h-10 bg-blue-500 text-white rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-truck text-lg"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Quick Delivery</h3>
+          <p class="text-gray-600 mb-2">Our team works swiftly to meet your deadlines.</p>
+          <a href="#details" class="text-blue-500 hover:text-blue-600 font-semibold">Learn More</a>
+        </div>
+
+    </div>
+  </section>
+
+
+<br>
+<br>
+
+  <!-- Statistics Section -->
+  <section class="py-16 bg-white text-center">
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <!-- Cleaned Spaces -->
+        <div class="bg-white-50 rounded-lg p-6 border border-gray-100 ">
+          <div class="w-12 h-12 bg-green-500 text-white rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-home text-lg"></i>
+          </div>
+          <h3 class="text-4xl font-bold text-black-600">1,820+</h3>
+          <p class="text-gray-600">Cleaned Spaces</p>
+        </div>
+
+        <!-- Years in Service -->
+        <div class="bg-white-50 rounded-lg p-6 border border-gray-100 ">
+          <div class="w-12 h-12 bg-green-500 text-white rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-calendar-check text-lg"></i>
+          </div>
+          <h3 class="text-4xl font-bold text-black-600">25+</h3>
+          <p class="text-gray-600">Years of Service</p>
+        </div>
+
+        <!-- Active Clients -->
+        <div class="bg-white-50 rounded-lg p-6 border border-gray-100 ">
+          <div class="w-12 h-12 bg-green-500 text-white rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-users text-lg"></i>
+          </div>
+          <h3 class="text-4xl font-bold text-black-600">750+</h3>
+          <p class="text-gray-600">Active Clients</p>
+        </div>
+
+        <!-- Environmental Impact -->
+        <div class="bg-white-50 rounded-lg p-6 border border-gray-100 ">
+          <div class="w-12 h-12 bg-green-500 text-white rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-seedling text-lg"></i>
+          </div>
+          <h3 class="text-4xl font-bold text-black-600">200+</h3>
+          <p class="text-gray-600">Waste Recycled</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Services Section -->
-  <section id="services" class="py-12 bg-gray-100 text-gray-800">
-    <div class="container mx-auto px-4">
-      <!-- Section Title -->
-      <div class="text-center mb-12">
-        <h2 class="text-4xl font-bold mb-4">Our Services</h2>
-        <p class="text-lg text-gray-600">We specialize in all cleaning and waste management services to keep your spaces pristine and sustainable.</p>
-      </div>
 
-      <!-- Horizontal Scrollable Row -->
-      <div class="services-scroll flex gap-6 overflow-x-auto scroll-smooth px-4 py-4">
-        <!-- Card 1 -->
-        <div class="service-card bg-white rounded-lg shadow-lg p-6 text-center w-72 flex-shrink-0">
-          <div class="w-16 h-16 mx-auto mb-4 bg-green-500 text-white rounded-full flex items-center justify-center">
-            <i class="fas fa-broom text-2xl"></i>
-          </div>
-          <h3 class="text-xl font-bold mb-2">Residential Cleaning</h3>
-          <p class="text-gray-600">Keep your home sparkling with our top-notch residential cleaning services.</p>
-        </div>
 
-        <!-- Card 2 -->
-        <div class="service-card bg-white rounded-lg shadow-lg p-6 text-center w-72 flex-shrink-0">
-          <div class="w-16 h-16 mx-auto mb-4 bg-teal-500 text-white rounded-full flex items-center justify-center">
-            <i class="bi bi-building text-2xl"></i>
-          </div>
-          <h3 class="text-xl font-bold mb-2">Commercial Cleaning</h3>
-          <p class="text-gray-600">Comprehensive cleaning services for offices and commercial spaces.</p>
-        </div>
 
-        <!-- Card 3 -->
-        <div class="service-card bg-white rounded-lg shadow-lg p-6 text-center w-72 flex-shrink-0">
-          <div class="w-16 h-16 mx-auto mb-4 bg-blue-500 text-white rounded-full flex items-center justify-center">
-            <i class="fas fa-dumpster text-2xl"></i>
-          </div>
-          <h3 class="text-xl font-bold mb-2">Waste Management</h3>
-          <p class="text-gray-600">Efficient waste collection and disposal solutions tailored to your needs.</p>
-        </div>
-
-        <!-- Card 4 -->
-        <div class="service-card bg-white rounded-lg shadow-lg p-6 text-center w-72 flex-shrink-0">
-          <div class="w-16 h-16 mx-auto mb-4 bg-orange-500 text-white rounded-full flex items-center justify-center">
-            <i class="fas fa-recycle text-2xl"></i>
-          </div>
-          <h3 class="text-xl font-bold mb-2">Recycling Services</h3>
-          <p class="text-gray-600">Sustainable recycling programs to minimize your environmental footprint.</p>
-        </div>
-
-        <!-- Card 5 -->
-        <div class="service-card bg-white rounded-lg shadow-lg p-6 text-center w-72 flex-shrink-0">
-          <div class="w-16 h-16 mx-auto mb-4 bg-purple-500 text-white rounded-full flex items-center justify-center">
-            <i class="fas fa-soap text-2xl"></i>
-          </div>
-          <h3 class="text-xl font-bold mb-2">Deep Cleaning</h3>
-          <p class="text-gray-600">Thorough deep cleaning for all spaces, ensuring hygiene and freshness.</p>
-        </div>
-
-        <!-- Card 6 -->
-        <div class="service-card bg-white rounded-lg shadow-lg p-6 text-center w-72 flex-shrink-0">
-          <div class="w-16 h-16 mx-auto mb-4 bg-red-500 text-white rounded-full flex items-center justify-center">
-            <i class="fas fa-truck-loading text-2xl"></i>
-          </div>
-          <h3 class="text-xl font-bold mb-2">Bulk Waste Removal</h3>
-          <p class="text-gray-600">Quick and efficient removal of bulk waste for residential and commercial areas.</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
 
   <!-- Waitlist Section -->
   <section id="join-waitlist" class="relative py-16 bg-gray-100 text-gray-800">
-    <!-- Blurred Background -->
-    <div class="absolute inset-0">
-      <img src="images/cleaning-service.jpeg" alt="Blurred Background" class="w-full h-full object-cover">
-      <div class="absolute inset-0 bg-gray-900 bg-opacity-40 backdrop-blur-md"></div>
-    </div>
-
-    <div class="relative container mx-auto px-6 flex flex-col md:flex-row items-center gap-6 max-w-2xl">
+    <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-6">
       <!-- Image Column -->
-      <div class="md:w-5/12">
-        <img src="images/mockup1.png" alt="Join Waitlist" class="rounded-lg w-auto h-auto">
+      <div class="md:w-1/2 flex justify-center">
+        <img src="images/clean.avif" alt="Cleaning Service" class="rounded-lg w-full h-auto max-w-sm md:max-w-full object-cover ">
       </div>
 
       <!-- Form Column -->
-      <div class="md:w-7/12 bg-white/90 backdrop-blur-lg p-8 rounded-lg shadow-2xl">
+      <div class="md:w-1/2 bg-white/90 backdrop-blur-lg p-8 rounded-lg ">
         <h2 class="text-4xl font-extrabold text-gray-900 mb-4">Join Our Waitlist</h2>
         <p class="text-lg text-gray-600 mb-6">Be the first to know when we launch. Sign up to receive updates and exclusive offers!</p>
 
-        <form id="waitlist-form" action="waitlist-handler.php" method="POST" class="space-y-4">
+        <form id="waitlist-form" action="https://hooks.zapier.com/hooks/catch/20838656/2i3qe28/" method="POST" class="space-y-4">
           <!-- Full Name Field -->
           <div>
             <label for="fullname" class="block text-sm font-medium text-gray-700">Full Name</label>
             <input type="text" id="fullname" name="fullname" required
-              class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 text-gray-900">
+              class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md  focus:ring-green-500 focus:border-green-500 text-gray-900">
           </div>
 
           <!-- Email Address Field -->
           <div>
             <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
             <input type="email" id="email" name="email" required
-              class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 text-gray-900">
+              class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md  focus:ring-green-500 focus:border-green-500 text-gray-900">
           </div>
 
           <!-- Submit Button -->
           <div>
             <button type="submit"
-              class="w-full py-2 px-4 bg-green-500 text-white font-semibold rounded-md shadow-sm hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-400 transition duration-200">
+              class="w-50 py-2 px-4 bg-blue-500 text-white font-semibold rounded-md  hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-400 transition duration-200">
               Join Now
             </button>
           </div>
         </form>
+      </div>
+    </div>
+  </section>
 
+  <!-- About Us Section -->
+  <section id="about" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-6">
+      <!-- Section Title -->
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-extrabold  text-black-600 mb-4">About Us</h2>
+        <p class="text-gray-700 text-lg">Learn more about Kleansure, our mission, and why we are your trusted cleaning partner.</p>
+      </div>
+
+      <!-- About Content -->
+      <div class="flex flex-col md:flex-row items-center gap-8">
+        <!-- Image -->
+        <div class="md:w-1/2">
+          <img src="images/cleaning-service.jpeg" alt="About Us" class="rounded-lg w-full h-auto">
+        </div>
+        <!-- Text Content -->
+        <div class="md:w-1/2 text-gray-800">
+          <h3 class="text-2xl font-bold mb-4"><i class="fas fa-users text-lg text-blue-600 px-8"></i>Who We Are</h3>
+          <p class="mb-4">
+            At Kleansure, we are dedicated to providing exceptional cleaning services that make your life easier. 
+            With over a decade of experience, our team of professionals ensures your spaces are spotless, hygienic, and welcoming.
+          </p>
+          <p class="mb-4">
+            Our eco-friendly solutions and customer-focused approach have made us a trusted name in the industry.
+            Whether it’s your home or business, we have the expertise and tools to deliver unmatched results.
+          </p>
+          <a href="#services" class="bg-blue-500 text-white px-6 py-3 rounded-lg transition hover:bg-green-600">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Key Highlights -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+        <!-- Highlight 1 -->
+        <div class="p-6 bg-white rounded-lg text-center">
+          <div class="w-12 h-12 bg-blue-500 text-white rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-leaf text-lg"></i>
+          </div>
+          <h4 class="text-xl font-bold mb-2">Eco-Friendly Cleaning</h4>
+          <p class="text-gray-600">We use sustainable products to protect you and the environment.</p>
+        </div>
+
+        <!-- Highlight 2 -->
+        <div class="p-6 bg-white rounded-lg  text-center">
+          <div class="w-12 h-12 bg-blue-500 text-white rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-star text-lg"></i>
+          </div>
+          <h4 class="text-xl font-bold mb-2">Top-Notch Service</h4>
+          <p class="text-gray-600">Our team is trained to deliver unmatched quality and reliability.</p>
+        </div>
+
+        <!-- Highlight 3 -->
+        <div class="p-6 bg-white rounded-lg  text-center">
+          <div class="w-12 h-12 bg-blue-500 text-white rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-clock text-lg"></i>
+          </div>
+          <h4 class="text-xl font-bold mb-2">Flexible Scheduling</h4>
+          <p class="text-gray-600">Book a cleaning service at a time that works best for you.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer id="contact" class="bg-gray-800 text-white py-12">
+    <div class="container mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8">
+      
+      <!-- About Us -->
+      <div>
+        <h3 class="text-xl font-bold mb-4">About Kleansure</h3>
+        <p class="text-gray-400">
+          Kleansure is your trusted partner for professional cleaning services. We deliver eco-friendly, high-quality solutions for homes and businesses.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+        <ul class="space-y-2">
+          <li><a href="#services" class="text-gray-400 hover:text-white transition">Our Services</a></li>
+          <li><a href="#careers" class="text-gray-400 hover:text-white transition">Careers</a></li>
+          <li><a href="#about" class="text-gray-400 hover:text-white transition">About Us</a></li>
+          <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Information -->
+      <div>
+        <h3 class="text-xl font-bold mb-4">Contact Us</h3>
+        <ul class="space-y-2">
+          <li class="text-gray-400">
+            <i class="fas fa-map-marker-alt mr-2"></i>
+            123 Main Street, Suite 500, New York, NY 10001
+          </li>
+          <li class="text-gray-400">
+            <i class="fas fa-phone mr-2"></i>
+            +1 800 123 4567
+          </li>
+          <li class="text-gray-400">
+            <i class="fas fa-envelope mr-2"></i>
+            info@Kleansure.com
+          </li>
+        </ul>
+      </div>
+
+      <!-- Newsletter Subscription -->
+      <div>
+        <h3 class="text-xl font-bold mb-4">Stay Updated</h3>
+        <p class="text-gray-400 mb-4">Subscribe to our newsletter to receive updates and exclusive offers.</p>
+        <form action="subscribe-handler.php" method="POST" class="flex items-center space-x-2">
+          <input type="email" name="email" placeholder="Enter your email" required
+            class="w-full px-4 py-2 rounded-lg bg-gray-700 text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500">
+          <button type="submit" class="bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-lg text-white font-semibold">
+            Subscribe
+          </button>
+        </form>
       </div>
     </div>
 
-  </section>
-
-
-
-
- <section id="how-it-works" class="relative py-16 bg-gray-50 text-gray-800">
-   <div class="container mx-auto px-4 text-center">
-     <!-- Title -->
-     <h2 class="text-4xl font-extrabold mb-6 text-gray-900">How the App Works</h2>
-     <p class="text-lg text-gray-600 mb-10">Discover how KleanSure makes cleaning and waste management seamless with just a few taps.</p>
-
-     <!-- Steps Section -->
-     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-       <!-- Step 1 -->
-       <div class="p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-         <img src="images/register.png" alt="Sign Up" class="w-60 h-40 object-cover rounded-t-lg mb-2">
-         <h3 class="text-xl font-bold text-gray-900 mb-2">Step 1: Sign Up</h3>
-         <p class="text-gray-600">Create an account in just a few seconds and get started.</p>
-       </div>
-
-       <!-- Step 2 -->
-       <div class="p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-         <img src="images/services.png" alt="Book a Service" class="w-60 h-40 object-cover rounded-t-lg mb-4">
-         <h3 class="text-xl font-bold text-gray-900 mb-2">Step 2: Book a Service</h3>
-         <p class="text-gray-600">Choose the service and time that works best for you.</p>
-       </div>
-
-       <!-- Step 3 -->
-       <div class="p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-         <img src="images/clean.avif" alt="Sit Back & Relax" class="w-full h-40 object-cover rounded-t-lg mb-4">
-         <h3 class="text-xl font-bold text-gray-900 mb-2">Step 3: Sit Back & Relax</h3>
-         <p class="text-gray-600">Enjoy a clean space, while we handle the rest for you.</p>
-       </div>
-     </div>
-   </div>
- </section>
-
-
-
-
- <section id="about" class="relative py-12">
-   <!-- Blurred Background Image -->
-   <div class="absolute inset-0">
-     <img src="images/farm2.jpg" alt="Background" class="object-cover w-full h-full blur-md brightness-50">
-   </div>
-   <!-- Content Overlay -->
-   <div class="relative container mx-auto px-4 flex flex-col md:flex-row items-center text-white">
-     <!-- Image Section -->
-     <div class="md:w-1/2 mb-8 md:mb-0 text-center md:text-left ">
-       <img src="images/kleansurelogo.png" alt="KleanSure Logo" class="rounded-lg shadow-lg max-w-sm mx-auto md:mx-0 bg-white">
-     </div>
-
-     <!-- About Section -->
-     <div class="md:w-1/2">
-       <h2 class="text-4xl font-bold mb-6 text-center md:text-left">About KleanSure</h2>
-       <p class="mb-6 text-lg leading-relaxed">
-         KleanSure is revolutionizing how you approach cleaning and waste management. 
-         Our eco-friendly solutions ensure a cleaner, greener future for everyone.
-       </p>
-       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-         <!-- Sustainability Card -->
-         <div class="p-6 bg-white bg-opacity-90 text-green-700 rounded-lg shadow-lg">
-           <i class="fas fa-seedling text-3xl mb-4"></i>
-           <h3 class="font-bold text-lg">Sustainability</h3>
-           <p class="text-sm">Eco-conscious solutions for a healthier planet.</p>
-         </div>
-         <!-- Commitment Card -->
-         <div class="p-6 bg-white bg-opacity-90 text-green-700 rounded-lg shadow-lg">
-           <i class="fas fa-hands-helping text-3xl mb-4"></i>
-           <h3 class="font-bold text-lg">Commitment</h3>
-           <p class="text-sm">Dedicated to providing exceptional services.</p>
-         </div>
-         <!-- Quality Card -->
-         <div class="p-6 bg-white bg-opacity-90 text-green-700 rounded-lg shadow-lg">
-           <i class="fas fa-award text-3xl mb-4"></i>
-           <h3 class="font-bold text-lg">Quality</h3>
-           <p class="text-sm">Uncompromised cleaning excellence.</p>
-         </div>
-       </div>
-     </div>
-   </div>
- </section>
-
+    <!-- Footer Bottom -->
+    <div class="mt-8 border-t border-gray-700 pt-6 text-center text-gray-400">
+      <div class="flex justify-center space-x-6 mb-4">
+        <a href="#" class="hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="hover:text-white transition"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="hover:text-white transition"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="hover:text-white transition"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+      <p>&copy; 2024 Kleansure. All rights reserved.</p>
     </div>
-  </section>
+  </footer>
 
 
-
-  <!-- FontAwesome for icons -->
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-
-
-  <!-- Bootstrap JS (optional) -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- Custom JS for Countdown -->
+  <!-- JavaScript -->
   <script src="main.js"></script>
+  <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", () => {
+      const menuButton = document.getElementById("menu-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const closeMenu = document.getElementById("close-menu");
+
+      // Open Mobile Menu
+      menuButton.addEventListener("click", () => {
+        mobileMenu.classList.remove("hidden");
+      });
+
+      // Close Mobile Menu
+      closeMenu.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+      });
+    });
+
+
+  </script>
 </body>
 </html>

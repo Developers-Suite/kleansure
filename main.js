@@ -63,7 +63,11 @@ document.getElementById("waitlist-form").addEventListener("submit", async (e) =>
       body: formData,
     });
 
+    // Explicitly handle response to avoid rendering raw JSON on mobile
     if (response.ok) {
+      const result = await response.json();
+      console.log("Response from Zapier:", result);
+
       // Show success message with SweetAlert2
       Swal.fire({
         icon: "success",

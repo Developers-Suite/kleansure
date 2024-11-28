@@ -40,6 +40,7 @@ document.getElementById("waitlist-form").addEventListener("submit", async (e) =>
 
   const fullname = document.getElementById("fullname").value.trim();
   const email = document.getElementById("email").value.trim();
+  const phone = document.getElementById("phone").value.trim();
 
   // Validate form fields (optional)
   if (!fullname || !email) {
@@ -55,6 +56,7 @@ document.getElementById("waitlist-form").addEventListener("submit", async (e) =>
   const formData = new FormData();
   formData.append("fullname", fullname);
   formData.append("email", email);
+  formData.append("phone", phone);
 
   try {
     // Send data to Zapier webhook
